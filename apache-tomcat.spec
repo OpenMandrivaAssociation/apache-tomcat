@@ -9,7 +9,7 @@ Source0:	https://dlcdn.apache.org/tomcat/tomcat-11/v%{version}/src/apache-tomcat
 
 BuildArch:	noarch
 BuildRequires:	ant
-BuildRequires:	java-devel
+BuildRequires:	java-current-devel
 BuildRequires:	mvn(org.eclipse.jdt:ecj)
 BuildRequires:	mvn(org.apache.tomcat:jakartaee-migration)
 BuildRequires:	mvn(commons-daemon:commons-daemon)
