@@ -28,6 +28,12 @@ built from source with the system Ant, the system Eclipse compiler, and
 system jars. The upstream build's download of prebuilt dependencies is
 turned off.
 
+# modules/jdbc-pool/pom.xml is not the Ant build. Its compile dependency
+# org.apache.tomcat:tomcat-juli is not packaged, and the jars this build
+# needs are the explicit BuildRequires above.
+%generate_buildrequires
+true
+
 %prep
 %setup -q -n apache-tomcat-%{version}-src
 mkdir -p bnd-stub/aQute/bnd/annotation/spi bnd-stub/classes
